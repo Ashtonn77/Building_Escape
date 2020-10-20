@@ -71,4 +71,9 @@ Intermediate/*
 Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
-DerivedDataCache/*
+*/DerivedDataCache
+*/Intermediate
+*/Binaries
+*/Build
+B_E_Game/Content/StarterContent
+*/Saved
