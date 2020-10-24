@@ -17,8 +17,8 @@ UOpenDoor::UOpenDoor()
 // Called when the game starts
 void UOpenDoor::BeginPlay()
 {
-	Super::BeginPlay();	
-	
+	Super::BeginPlay();
+	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();	
 }
 
 void UOpenDoor::OpenDoor()
