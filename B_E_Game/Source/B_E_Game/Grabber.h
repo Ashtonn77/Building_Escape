@@ -2,9 +2,12 @@
 
 #pragma once
 
+#include "PhysicsEngine/PhysicsHandleComponent.h"
+#include "Components/InputComponent.h"
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Grabber.generated.h"
+
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -27,6 +30,14 @@ public:
 private:
 	//How far ahead of the player can we reach
 	float Reach = 100.0f;
+	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+	UInputComponent* InputComponent = nullptr;
 
+
+	//Ray-cast and grab whats in reach
+	void Grab();
+
+	//Call when grab is released
+	void Release();
 		
 };
